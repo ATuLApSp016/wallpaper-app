@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:wallpaper_app/data/remote/api_helpers.dart';
 import 'package:wallpaper_app/data/repository/wallpaper_repository.dart';
 import 'package:wallpaper_app/pages/search/cubit/search_cubit.dart';
-import 'package:wallpaper_app/pages/search/search_page.dart';
 import 'package:wallpaper_app/pages/home/cubit/home_cubit.dart';
-import 'package:wallpaper_app/pages/home/home.dart';
 import 'package:wallpaper_app/pages/home/home_bnb.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wallpaper_app/utils/app_colors.dart';
 
 void main() {
   runApp(MultiBlocProvider(providers: [
@@ -29,7 +28,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Wallpaper App',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme:
+            ColorScheme.fromSeed(seedColor: AppColors.primaryLightColor),
         useMaterial3: true,
       ),
       home: const HomeBNB(),

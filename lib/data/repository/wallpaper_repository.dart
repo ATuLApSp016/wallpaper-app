@@ -7,10 +7,10 @@ class WallPaperRepository {
 
   ///search
   Future<dynamic> getSearchWallpapers(String mQuery,
-      {String mColor = ''}) async {
+      {String mColor = '', int mPage = 1}) async {
     try {
       return await apiHelper.getAPI(
-          url: '${AppUrls.SEARCH_WALL_URL}?query=$mQuery&color=$mColor');
+          url: '${AppUrls.SEARCH_WALL_URL}?query=$mQuery&color=$mColor&page=$mPage');
     } catch (e) {
       rethrow;
     }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wallpaper_app/models/category_model.dart';
+import 'package:wallpaper_app/utils/app_images.dart';
 
 class AppConstant {
   static const String PEXELS_API_KEY =
@@ -54,6 +55,11 @@ class AppConstant {
         title: 'Sports',
         image:
             'https://images.pexels.com/photos/46798/the-ball-stadion-football-the-pitch-46798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+  ];
+  static final List<Map<String, dynamic>> dataList = [
+    {'icon': AppImages.IC_INFO, 'text': 'info'},
+    {'icon': AppImages.IC_DOWNLOAD, 'text': 'save'},
+    {'icon': AppImages.IC_APPLY, 'text': 'Apply'},
   ];
 }
 

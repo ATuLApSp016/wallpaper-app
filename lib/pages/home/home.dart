@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => SearchDetailPage(
-                                  query: searchController.text)));
+                                  query: searchController.text,color: AppConstant.mColors.length.toString())));
                     }
                   },
                   child: Icon(CupertinoIcons.search,
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => DownloadPage(
-                                              mPhotos: eachPhotos,
+                                              imgModel: eachPhotos.src!,
                                               mIndex: index)));
                                 }),
                           ),
@@ -179,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                SearchDetailPage(query: eachData.title)));
+                                SearchDetailPage(query: eachData.title,color: AppConstant.mColors.length.toString(),)));
                   },
                   child: getCategoryWidget(
                       title: eachData.title,
